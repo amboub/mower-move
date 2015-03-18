@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class MowItNow {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
         MowItNowParser parser = new MowItNowParser(Paths.get(args[0]));
 
         MowItNowService mowItNowService = new MowItNowServiceImpl();
@@ -29,5 +29,6 @@ public class MowItNow {
             System.out.println(mower);
         }
         System.out.println("------------------------------------------------------");
+        Thread.sleep(3000);
     }
 }
